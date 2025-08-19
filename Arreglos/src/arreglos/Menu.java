@@ -44,10 +44,25 @@ public class Menu extends javax.swing.JFrame {
         });
 
         get.setText("CONSULTAR");
+        get.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getActionPerformed(evt);
+            }
+        });
 
         edit.setText("MODIFICAR");
+        edit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editActionPerformed(evt);
+            }
+        });
 
         delete.setText("ELIMINAR");
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +114,59 @@ public class Menu extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error: "+e);
         }
     }//GEN-LAST:event_createActionPerformed
+
+    private void getActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getActionPerformed
+        // TODO add your handling code here:
+        try{
+        int mayor = 0;
+        int menor = 0;
+        int sum1=0;
+        int sum2=0;
+        double prom = 0;
+
+        int cantMa=0;
+        int cantMe=0;
+        for(int ag: age){
+            JOptionPane.showMessageDialog(null, age.length);
+
+            if(ag>=18){
+                cantMa++;
+                JOptionPane.showMessageDialog(null, "Mayor de edad " + ag);
+                sum1++;
+                mayor+=ag;
+            }else{
+                cantMe++;
+                JOptionPane.showMessageDialog(null, "Menor de edad " + ag);
+                sum2++;
+                menor+=ag;
+
+            }
+
+        }
+        //Suma de mayores
+        prom = mayor/sum1;
+        JOptionPane.showMessageDialog(null, "Hay " + sum1 + " personas mayores");
+        JOptionPane.showMessageDialog(null, "Promedio de las personas mayores " + prom);
+        //Suma de Menores
+        prom = menor/sum2;
+        JOptionPane.showMessageDialog(null, "Hay " + sum2 + " personas menores");
+        JOptionPane.showMessageDialog(null, "Promedio de las personas menores " + prom);
+        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+    }//GEN-LAST:event_getActionPerformed
+
+    private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_editActionPerformed
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_deleteActionPerformed
 
     /**
      * @param args the command line arguments
