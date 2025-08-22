@@ -127,7 +127,6 @@ public class Menu extends javax.swing.JFrame {
         int cantMa=0;
         int cantMe=0;
         for(int ag: age){
-            JOptionPane.showMessageDialog(null, age.length);
 
             if(ag>=18){
                 cantMa++;
@@ -160,12 +159,37 @@ public class Menu extends javax.swing.JFrame {
 
     private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
         // TODO add your handling code here:
+        try{
+            int i = Integer.parseInt(JOptionPane.showInputDialog("Digite la posición que desea modificar"));
+            int r = Integer.parseInt(JOptionPane.showInputDialog("Digite el valor para remplazar"));
+            age[i] = r;
+            JOptionPane.showMessageDialog(null, "Nuevo valor: "+ age[i]);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error al digitar los valores");
+        }
         
     }//GEN-LAST:event_editActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-        
+        try{
+            JOptionPane.showMessageDialog(null, "1 -> Eliminar mayores de edad");
+            JOptionPane.showMessageDialog(null, "2 -> Eliminar menores de edad");
+            JOptionPane.showMessageDialog(null, "3 -> Cancelar");
+            int validate = Integer.parseInt(JOptionPane.showInputDialog("Digite..."));
+            for(int i = 0; i<age.length; i++){
+                if(validate == 1 && age[i]<18){
+                    age[i]=0;
+                }else if(validate == 2 && age[i]>=18){
+                    age[i]=0;
+
+                }else{
+                    break;
+                }
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error al digitar los valores");
+        }
     }//GEN-LAST:event_deleteActionPerformed
 
     /**
