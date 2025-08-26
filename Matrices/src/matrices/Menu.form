@@ -66,17 +66,21 @@
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="rowsText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="create" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="rows" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="msgRows" alignment="1" min="-2" pref="16" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rowsText" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="create" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="rows" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="colsText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cols" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="msgCols" alignment="1" min="-2" pref="16" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="colsText" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cols" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
