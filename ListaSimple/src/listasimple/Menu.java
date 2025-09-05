@@ -29,8 +29,8 @@ public class Menu extends javax.swing.JFrame {
 
         InicioBTN = new javax.swing.JButton();
         finalBTN = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        adelanteBTN = new javax.swing.JButton();
+        atrasBTN = new javax.swing.JButton();
         consultarBTN = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -51,17 +51,17 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("ADELANTE");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        adelanteBTN.setText("ADELANTE");
+        adelanteBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                adelanteBTNActionPerformed(evt);
             }
         });
 
-        jButton4.setText("ATRAS");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        atrasBTN.setText("ATRAS");
+        atrasBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                atrasBTNActionPerformed(evt);
             }
         });
 
@@ -93,8 +93,8 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(atrasBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(adelanteBTN, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(InicioBTN, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(finalBTN, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(33, 33, 33)
@@ -117,9 +117,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(finalBTN)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(adelanteBTN)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(atrasBTN)
                 .addContainerGap(115, Short.MAX_VALUE))
         );
 
@@ -140,13 +140,18 @@ public class Menu extends javax.swing.JFrame {
         objetoList.ultimo(nombre, edad);
     }//GEN-LAST:event_finalBTNActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void adelanteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adelanteBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        String nombre = JOptionPane.showInputDialog("Ingresar el nombre");
+        int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingresar la edad"));
+        String buscar = JOptionPane.showInputDialog("Ingresar el valor a buscar");
+        objetoList.adelante(nombre, edad, buscar);
+    }//GEN-LAST:event_adelanteBTNActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void atrasBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        
+    }//GEN-LAST:event_atrasBTNActionPerformed
 
     private void consultarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarBTNActionPerformed
         // TODO add your handling code here:
@@ -199,10 +204,10 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton InicioBTN;
+    private javax.swing.JButton adelanteBTN;
+    private javax.swing.JButton atrasBTN;
     private javax.swing.JButton consultarBTN;
     private javax.swing.JButton finalBTN;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     // End of variables declaration//GEN-END:variables

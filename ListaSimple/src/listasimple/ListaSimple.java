@@ -26,7 +26,7 @@ public class ListaSimple {
             nuevo.setDireccion(primero);
             primero=nuevo;
         }
-    };
+    }
     public void ultimo(String nombre, int edad){
         Nodo nuevo = new Nodo();
 
@@ -43,6 +43,26 @@ public class ListaSimple {
                 temporal.setDireccion(nuevo);
         }
         
+    }
+    //Buscar por el nombre
+    public void adelante(String nombre, int edad, String buscar){
+        Nodo nuevo = new Nodo();
+        setters(nuevo, nombre, edad);
+        if(primero == null){
+            JOptionPane.showMessageDialog(null, "Lista vacía");
+        }else{
+            Nodo temporal = primero;
+            do{
+                if(temporal.getNombre().equals(buscar)){
+                    //Apunta hacia el que apuntaba temporal
+                    nuevo.setDireccion(temporal.getDireccion());
+                    //Apunta a la nueva lista
+                    temporal.setDireccion(nuevo);
+                    break;
+                }
+                temporal = temporal.getDireccion();
+            }while(temporal.getDireccion() != null);
+        }
     }
     public void consultar(){
         Nodo temporal = primero;
